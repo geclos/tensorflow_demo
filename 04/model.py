@@ -48,3 +48,6 @@ predictions = model.predict(test_images)
 print('Predictions', predictions[0])
 print('First prediction (most likely):', class_names[test_labels[np.argmax(predictions[0])]])
 
+# Plot the first 10 test images, their predicted label, and the true label
+# Color correct predictions in blue, incorrect predictions in red
+plot_utils.plot_predictions(10, predictions, test_labels, test_images)
